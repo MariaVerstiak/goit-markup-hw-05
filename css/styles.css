@@ -314,7 +314,9 @@ address{
 .team-list{
     background-color: #FFFFFF;
     width: calc((100% - 72px) / 4)
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+    0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-mem-description{
@@ -538,6 +540,10 @@ address{
     fill: #f4f4fd;
 }
 
+.subscribe-form{
+    margin-left: auto;
+}
+
 .subscribe-title{
     font-weight: 500;
     font-size: 16px;
@@ -556,10 +562,6 @@ address{
 
 .footer-subscribe-icon{
     fill: #fff;
-}
-
-input:checked + label > span {
-
 }
 
 .order-form-close-btn{
@@ -581,18 +583,60 @@ input:checked + label > span {
     fill: #2e2f42;
 }
 
-.modal-order-form{
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
-    width: 1440px;
-    max-height: 676px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.order-form-make{
+.backdrop.is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 408px;
+    height: 80%;
     max-height: 584px;
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: #fcfcfc;
+    transform: translate(-50%, -50%);
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+
+.order-form-close-btn{
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #e7e9fc;
+    border-color: rgba(0, 0, 0, 0.1);
+    stroke: #2e2f42;
+    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-form-close-btn:hover, .order-form-close-btn:focus{
+    background-color: #404bbf; 
+    stroke: #fff; 
+    border-color: transparent;
 }
 
 .order-form-title{
@@ -603,16 +647,52 @@ input:checked + label > span {
     text-align: center;
     color: #2e2f42;
     max-width: 360px;
+    margin-top: 72px;
+    margin-bottom: 16px;
+}
+
+.form-field-label{
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    margin-bottom: 8px;
+}
+
+.form-input-text{
+    border: 1px solid rgba(46, 47, 66, 0.4);;
+    border-radius: 4px;
+    padding: 3px 0px;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+}
+
+.form-field-comment{
+    border: 1px solid rgba(46, 47, 66, 0.4);;
+    border-radius: 4px;
+    width: 100%;
+    height: 120px;
+    resize: none;
+}
+
+.form-input-icon-div ~ svg{
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .form-btn-submit{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background: #4d5ae5;;
+    background-color: #4d5ae5;
+    border-color: transparent;
     border-radius: 4px;
     padding: 16px 32px;
     min-width: 169px;
     height: 56px;
     cursor: pointer;
     color: #fff;
-    margin-top: 24px;
+    margin-top: 16px;
 }

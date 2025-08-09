@@ -37,7 +37,7 @@
     <section class="main-page"> 
         <div class="container main-page-container">
             <h1 class="main-page-title">Effective Solutions or Your Business</h1>
-            <button class=order-button type="button">Order Service</button>
+            <button class=order-button type="button" data-modal-open>Order Service</button>
         </div>
     </section>   
     <section class="studio">
@@ -350,7 +350,8 @@
 
    <div class="subscribe-form">
         <p class="subscribe-title">Subscribe</p>
-        <label class="subscribe-label">E-mail</label>
+        <form class="subscribe-form">
+            <label class="subscribe-label">E-mail</label>
             <div class="subscribe-btn-cont">
                 <button class="subscribe-btn" type="button">
                     <svg class="footer-subscribe-icon" width="24" height="20">
@@ -358,66 +359,67 @@
                     </svg>
                 </button>
              </div>
-
+        </form>
    </div>
 
 
    </div>
     </footer> 
 
-    <div class="modal-order-form">
-        <div class="order-form-make">
-            <button class="order-form-close-btn" type="button">
-                <svg class="close-btn-icon" width="8" height="8">
+    <div class="backdrop is-open data-modal">
+        <div class="modal-box">
+            <button class="order-form-close-btn" type="button" data-modal-close>
+                <svg class="close-btn-icon" width="8"  height="8">
                     <use href="./images/icons.svg#icon-close"></use>
                 </svg>
             </button>
             <p class="order-form-title">Leave your contacts and we will call you back</p>
-        </div>
+        
 
     <form>
         <div class="form-field">
-            <label class="form-label-name" for="input-name">Field Name</label>
-                <div class="input-wrapper">
-                    <input class="form-input-name" name="input-name" id="input-name" type="text">
-                        <svg class="form-name-icon">
-                            <use href="./images/icons.svg#icon-person"></use>
-                        </svg>
-                </div>
+            <label class="form-field-label" for="field_name">Name</label>
+            <div class="form-input-icon-div">
+                <input class="form-input-text" name="field_name" id="field_name" type="text">
+                <svg class="form-name-icon" width="24"  height="18">
+                    <use href="./images/icons.svg#icon-person"></use>
+                </svg>
+            </div>
+        <div class="form-field">
+            <label class="form-field-label" for="field_phone">Phone</label>
+            <div class="form-input-icon-div">
+                <input class="form-input-text" name="field_phone" id="field_phone" type="text">
+                <svg class="form-name-icon" width="24"  height="18">
+                    <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="form-field">
+            <label class="form-field-label" for="field-email">Email</label>
+            <div class="form-input-icon-div">
+                <input class="form-input-text" name="field-email" id="field-email" type="text">
+                <svg class="form-name-icon" width="24"  height="18">
+                    <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="form-field">
+            <label class="form-field-label" for="field_comment">Comment</label>
+            <textarea class="form-field-comment" name="field_comment" id="field_comment" placeholder="Text input"></textarea>
         </div>
 
         <div class="form-field">
-            <label class="form-label-phone" for="input-phone">Field Name</label>
-                <div class="input-wrapper">
-                    <input class="form-input-phone" name="input-phone" id="input-phone" type="text">
-                        <svg class="form-name-icon">
-                            <use href="./images/icons.svg#icon-phone"></use>
-                        </svg>
-                </div>
-        </div>
-
-        <div class="form-field">
-            <label class="form-label-email" for="input-email">Field Name</label>
-                <div class="input-wrapper">
-                    <input class="form-input-email" name="input-email" id="input-email" type="text">
-                        <svg class="form-name-icon">
-                            <use href="./images/icons.svg#icon-email"></use>
-                        </svg>
-                </div>
-        </div>
-
-        <div class="form-field">
-            <input type="checkbox" id="field-privacy">
-
-            <label for="field-privacy">
-                <span class="form-checkbox"></span>
-                I accept the terms and conditions of the <a class="highlight" href="">Privacy Policy</a>
+            <input type="checkbox" id="field_privacy">
+            <label for="field_privacy">I accept the terms and conditions of the 
+                <a class="highligt" href="">Policy</a>
             </label>
-
         </div>
 
         <button class="form-btn-submit" type="submit">Send</button>
+        </div>
     </form>
     </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

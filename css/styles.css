@@ -679,6 +679,7 @@ address{
 .order-form-close-btn:hover, .order-form-close-btn:focus{
     background-color: #404bbf; 
     border: none;
+    fill: #ffffff
 }
 
 .close-btn-icon{

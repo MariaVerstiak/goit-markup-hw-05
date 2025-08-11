@@ -604,25 +604,6 @@ address{
     fill: #fff;
 }
 
-.order-form-close-btn{
-    border-radius: 100%;
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    cursor: pointer;
-    top: 24;
-    right: 24;
-    border-radius: 100%;
-    stroke-width: 1px;
-    stroke: rgba(0, 0, 0, 0.1);
-    fill: #e7e9fc;
-    transition: fill 250ms ease-in-out;
-}
-
-.close-btn-icon{
-    fill: #2e2f42;
-}
-
 .backdrop{
     position: fixed;
     top: 0;
@@ -673,7 +654,7 @@ address{
     background-color: #e7e9fc;
     border: 1px solid rgba(0, 0, 0, 0.1);
     fill: #2e2f42;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .form-close-btn:hover, .form-close-btn:focus{

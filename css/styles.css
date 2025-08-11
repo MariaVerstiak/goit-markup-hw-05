@@ -550,12 +550,28 @@ address{
     color: #fff;
 }
 
+.subscribe-form-items{
+    display: flex;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 .subscribe-btn{
     border-radius: 4px;
     padding: 8px 24px;
     width: 165px;
     height: 40px;
     background-color: #4d5ae5;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
 }
 
 .footer-subscribe-icon{
@@ -614,7 +630,6 @@ address{
     padding-left: 24px;
     padding-right: 24px;
 }
-
 
 .order-form-close-btn{
     position: absolute;
@@ -720,16 +735,35 @@ address{
     color :rgba(46, 47, 66, 0.4);
 }
 
+.form-label-checkbox{
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
 .form-custom-checkbox{
     display: block;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     width: 16px;
     height: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
 }
 
 #field_privacy:checked + .form-label-checkbox > .form-custom-checkbox{
     background-color: #404bbf;
+}
+
+.form-custom-checkbox svg{
+    opacity: 0;
+}
+
+#field_privacy:checked + .form-label-checkbox > .form-custom-checkbox svg{
+    opacity: 1;
 }
 
 .highlight{
@@ -748,6 +782,10 @@ address{
     height: 56px;
     cursor: pointer;
     color: #fff;
+    display: block;
+    margin: 0 auto;
+    text-wrap: nowrap;
+    border: none;
     margin-top: 16px;
     margin-bottom: 24px;
 }

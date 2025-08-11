@@ -347,13 +347,13 @@
     </ul>
    </div>
 
-
    <div class="subscribe-form">
         <p class="subscribe-title">Subscribe</p>
-        <form class="subscribe-form">
-            <label class="subscribe-label">E-mail</label>
+        <form class="subscribe-form-items">
+            <label class="subscribe-label"></label>
+            <textarea class="subscribe-email" name="subscribe_email" id="subscribe_email" placeholder="Email"></textarea>
             <div class="subscribe-btn-cont">
-                <button class="subscribe-btn" type="button">
+                <button class="subscribe-btn" type="button">Subscribe
                     <svg class="footer-subscribe-icon" width="24" height="20">
                      <use href="./images/icons.svg#icon-subscribe"></use>
                     </svg>
@@ -366,7 +366,7 @@
    </div>
     </footer> 
 
-    <div class="backdrop is-open data-modal">
+    <div data-modal class="backdrop">
         <div class="modal-box">
             <button class="order-form-close-btn" type="button" data-modal-close>
                 <svg class="close-btn-icon" width="8"  height="8">
@@ -409,8 +409,14 @@
         </div>
 
         <div class="form-field">
-            <input type="checkbox" id="field_privacy">
-            <label for="field_privacy">I accept the terms and conditions of the 
+            <input class="input-checkbox visually-hidden" type="checkbox" id="field_privacy">
+            <label class="form-label-checkbox" for="field_privacy"> 
+                <span class="form-custom-checkbox">
+                    <svg class="form-custom-checkbox-check" width="10" height="8">
+                      <use href="./images/icons.svg#icon-check"></use>
+                    </svg>
+                </span>
+                I accept the terms and conditions of the 
                 <a class="highligt" href="">Privacy Policy</a>
             </label>
         </div>

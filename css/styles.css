@@ -186,6 +186,7 @@ address{
 	to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
     url("../images/people-office.jpg");
     max-width: 1440px;
+    margin: 0 auto;
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: center; 
@@ -433,6 +434,7 @@ address{
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .portfolio-description{
@@ -555,7 +557,7 @@ address{
     width: 264px;
     height: 40px;
     border: 1px solid #ffffff; 
-    background-color: transparent;
+    background-color: #ffffff;
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
@@ -628,7 +630,6 @@ address{
     top: 50%;
     left: 50%;
     width: 408px;
-    height: 80%;
     min-height: 584px;
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -708,7 +709,7 @@ address{
 }
 
 .form-input-text:focus{
-    border: #4d5ae5;
+    border-color: #4d5ae5;
 }
 
 .form-input-text:focus ~ svg{
@@ -724,7 +725,6 @@ address{
     width: 100%;
     height: 120px;
     resize: none;
-    margin-bottom: 16px;
     font-weight: 400;
     font-size: 12px;
     line-height: 117%;
@@ -826,7 +826,6 @@ address{
     text-wrap: nowrap;
     border: none;
     margin-top: 16px;
-    margin-bottom: 24px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
 }
